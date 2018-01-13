@@ -113,7 +113,7 @@ module RailsAmp
 
       def config_layout
         load_config['layout'] || 'rails_amp_application'
-      end      
+      end
 
       def config_lookup_formats
         load_config['lookup_formats'].to_s.split(/\s+/).map(&:to_sym).presence || [:html]
