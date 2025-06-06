@@ -30,7 +30,7 @@ module RailsAmp
                     format.send(RailsAmp.default_format.to_sym) do
                       # search amp format(default is .amp) .html templates
                       lookup_context.formats = [RailsAmp.default_format] + RailsAmp.lookup_formats
-                      render layout: "#{RailsAmp.config.layout}.amp"
+                      render layout: "#{RailsAmp.config.layout}"
                     end
                   end
                 end
