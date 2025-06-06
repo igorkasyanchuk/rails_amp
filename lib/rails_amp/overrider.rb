@@ -4,7 +4,8 @@ module RailsAmp
 
     included do
       before_action do
-        RailsAmp.format = request[:format]
+        RailsAmp.format = request.params[:format]
+
         if RailsAmp.amp_renderable?(controller_path, action_name)  # default_format is :amp
           override_actions_with_rails_amp
         end
